@@ -1,0 +1,6 @@
+/* Tilpas til tablet og større skærme */
+@media(max width>=700px) {main{max-width: 1000px; margin: 0 auto;}
+}
+
+/* DESKOP */
+@media(width>=1200px){}
