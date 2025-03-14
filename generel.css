@@ -10,7 +10,7 @@ display: block;}
 /* Så teksten bliver skubbet ned under headeren */
 main {
     padding-top: 80px;
-}
+padding-bottom: 80px;}
 
 
 
@@ -32,6 +32,7 @@ main {
 
   /* Venstre side af menuen, search icon */
   .search-icon img {
+    transform: rotate(315deg);
     width: 24px;
     height: 24px;
     transition: transform 0.2s;
@@ -63,29 +64,16 @@ main {
 }
 
 
-
     /* Forside */
-
-    /*Får baggrundsbilledet til at fylde hele skærmen*/
     .frontpage {
-        position: relative;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
+        background-image: url(background.svg);
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        height: auto; 
     }
 
-    /* Baggrundsbilledet */
-.background {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; /* Sender billedet bagerst */
-}
 
-  
 /* Centrering af H1 og logo */
 .frontpage-content {
     display: grid; 
@@ -98,27 +86,45 @@ main {
 /* H1 STYLING */
 
 h1{
-font-family: "audiowide";}
+font-family: "audiowide";
+font-size: 40px;
+text-align: center;}
 
-/* Logo styling */
-.black-logo {
-    
-width: 50vw;
-   
-}
-
+/* Frontpage content */
 /* Hover-effekt: Skifter logoet til rød */
 .black-logo:hover {
     content: url('red-logo.svg'); /* Skifter til rød version */
 }
 
+.black-logo {
+    
+    width: 50vw;
+       
+    }
 
 /* Artist side */
-section.artist{background-color: rgb(239, 239, 239);}
+.artist-background{background-color: rgb(239, 239, 239);}
 h1.artist{text-align: center;}
 
-/* .artist{display: grid; grid-template-columns: 2fr,1fr;} */
+/* Billederne af kunstnere */
+.artist-grid{display: grid;
+    grid-template-columns: repeat(2,1fr) ; 
+    gap: 30px ;
+text-align: center;
+justify-content: center;
+margin: 0 auto;}
 
+.artist-grid div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.artist-grid a {
+    text-decoration: none;
+    color: inherit; 
+}
 
 /* CONTACT */
 .contact-section {
@@ -133,10 +139,59 @@ h1.artist{text-align: center;}
     flex-direction: column;
     gap: 20px;
 }
+.adress-info
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-.contact-info h3 {
-    font-size: 20px;
-    font-weight: bold;
+hr {
+    margin: 40px 0; /* Skaber 40px luft over og under */
+    border-top: 2px solid black; /* Giver en pæn sort streg */
+
+}
+
+/* SPECIFIC ARTIST */
+.berg-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Venstre kolonne (kunstner) og højre kolonne (kunstværker) */
+    gap: 40px; /* Afstand mellem venstre og højre side */
+    max-width: 1200px;
+    margin: 40px auto;
+    align-items: start;
+}
+
+/* Kunstner-info venstre side */
+.berg-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 20px;
+}
+/* Grid for kunstværker */
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    text-align: center;
+}
+
+.art-grid div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.berg-info p {
+    margin-top: 10px;
+}
+.berg-info img{margin-bottom: 20px;}
+
+.berg-info h1 {
+    margin-bottom: 40px;
 }
 
 /* ABOUT */
@@ -150,6 +205,15 @@ h1.artist{text-align: center;}
     gap: 20px;}
 
 
+/* Baggrund på About og Contact */
+.grey-background {
+    background-image: url(img/Background-grey.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Sørger for at baggrunden fylder hele skærmen */
+    width: 100%; /* Sikrer at baggrunden dækker hele bredden */
+}
 /* Footer */
 
 footer {
@@ -165,18 +229,3 @@ footer {
 
 footer img {
     width: 50px;}
-
-
-
-
-/* Tekst-styling */
-h1.headline {
-    position: relative;
-    color: black;
-    font-size: 40px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-
-
