@@ -1,13 +1,85 @@
+
+/* Mobile first */
+
+/*  Artist side, Billederne af kunstnere */
+.artist-grid{display: grid;
+    grid-template-columns:1fr; 
+    gap: 30px ;
+text-align: center;
+justify-content: center;
+margin: 0 auto;}
+
+/* SPECIFIC ARTIST */
+.berg-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    /* max-width: 1200px;
+    margin: 40px auto; */
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+
+/* Grid for kunstværker */
+.art-grid {
+    display: grid;
+    grid-template-columns:1fr; 
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    text-align: center;
+}
+
+
 /* Tilpas til tablet og større skærme*/ 
 
-@media(width>=700p){main{max-width: 1000px;
-margin: 0 auto;}}
+@media(min-width:900px){/*  Artist side, Billederne af kunstnere */
+    .artist-grid{display: grid;
+        grid-template-columns: repeat(2,1fr) ; 
+        gap: 30px ;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;}
 
-@media (width>=1200px) {
-    
+/* SPECIFIC ARTIST */
+.berg-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    align-items: start;
 }
+/* Grid for kunstværker */
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    text-align: center;
+}}
+
+
+
+
+
+
+
+
 
 @font-face {
     font-family:"audiowide" ;
     src: url(fonts/Audiowide/Audiowide-Regular.ttf);
+}
+
+@font-face {
+    font-family:"montserrat-light" ;
+    src: url(fonts/Montserrat/static/Montserrat-Light.ttf);
+}
+
+@font-face {
+    font-family:"montserrat-bold" ;
+    src: url(fonts/Montserrat/static/Montserrat-Bold.ttf);
 }
