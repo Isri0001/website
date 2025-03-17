@@ -56,7 +56,8 @@ padding-bottom: 80px;}
         text-decoration: none;
         font-size: 18px;
 
-        transition: color 0.2s;}
+        transition: color 0.2s;
+        font-family: "montserrat-light";}
 
         .menu a:hover {
             text-decoration: underline;
@@ -67,7 +68,9 @@ padding-bottom: 80px;}
 }
 
 
-    /* Forside */
+
+
+    /* FORSIDE */
     .frontpage {
         background-image: url(background.svg);
         background-size: cover; 
@@ -93,9 +96,12 @@ font-family: "audiowide";
 font-size: 40px;
 text-align: center;}
 
+h3{font-family:"montserrat-bold" ;}
+h2{font-family:"montserrat-bold" ;}
 p{font-family: "montserrat-light";}
 
-h3{font-family:"montserrat-bold" ;}
+
+
 
 /* Frontpage content */
 /* Hover-effekt: Skifter logoet til rød */
@@ -104,10 +110,9 @@ h3{font-family:"montserrat-bold" ;}
 }
 
 
-/* Artist side */
+/* ARTISTS */
 .artist-background{background-color: rgb(239, 239, 239);}
 h1.artist{text-align: center;}
-
 
 
 .artist-grid div {
@@ -121,14 +126,18 @@ h1.artist{text-align: center;}
     text-decoration: none;
     color: inherit; 
 }
+.artist h3{margin-bottom: 10px;}
+
+.smoke{margin-bottom: 80px;}
 
 /* CONTACT */
 .contact-section {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
 }
+.contact-info p{line-height: 1.9;}
 
 .contact-info {
     display: flex;
@@ -146,32 +155,45 @@ h1.artist{text-align: center;}
     margin-bottom: 10px;
 }
 
-.address-info p {
+.address-info div {
     margin-bottom: 20px;
 }
 
+.adress-info {line-height: 1.9;}
 hr {
     margin: 40px 0;
     border-top: 2px solid black;
 
 }
 
+.contact-info h1{margin-bottom: 20px}
 
 
-/* Kunstner-info venstre side */
+/* SPECIFIC ARTIST */
+
 .berg-info {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: left;
     text-align: left;
     padding: 20px;
+    max-width: 90%;
+    margin: 0 auto;
 }
+
+.artist-p{line-height: 1.5;}
+.berg-img {border-radius: 30px;}
+
+.berg-info p{max-width: 250px;
+text-align: left;}
 
 
 .art-grid div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .berg-info p {
@@ -183,16 +205,25 @@ hr {
     margin-bottom: 40px;
 }
 
+
+
+
 /* ABOUT */
-.about{max-width: 800px;
+.about{max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    text-align: center;
-    max-width: 600px;
+    text-align: left;
     display: flex;
     flex-direction: column;
     gap: 20px;}
 
+    .about p{max-width: 400px;
+    text-align: left;
+margin: 0 auto 20px;
+line-height: 1.9;}
+
+    .about h1{max-width: 100%;
+    margin-bottom: 20px;}
 
 /* Baggrund på About og Contact */
 .grey-background {
@@ -220,5 +251,3 @@ footer img {
     width: 50px;}
 
 
-    /* Specific artist - Berg */
-    .berg-img {border-radius: 30px;}

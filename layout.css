@@ -22,7 +22,6 @@ margin: 0 auto;}
 }
 
 
-
 /* Grid for kunstværker */
 .art-grid {
     display: grid;
@@ -30,6 +29,8 @@ margin: 0 auto;}
     grid-template-rows: repeat(2, auto);
     gap: 20px;
     text-align: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 
@@ -63,11 +64,7 @@ margin: 0 auto;}
 
 
 
-
-
-
-
-
+/* Font */
 
 @font-face {
     font-family:"audiowide" ;
