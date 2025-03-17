@@ -10,7 +10,8 @@ display: block;}
 /* skub tekst under headeren */
 main {
     padding-top: 80px;
-padding-bottom: 80px;}
+padding-bottom: 80px;
+}
 
 
 
@@ -73,9 +74,9 @@ padding-bottom: 80px;}
     /* FORSIDE */
     .frontpage {
         background-image: url(background.svg);
-        background-size: cover; 
+        /* background-size: cover;  */
         background-position: center; 
-        background-repeat: no-repeat; 
+        /* background-repeat: no-repeat;  */
         height: auto; 
     }
 
@@ -96,9 +97,10 @@ font-family: "audiowide";
 font-size: 40px;
 text-align: center;}
 
-h3{font-family:"montserrat-bold" ;}
-h2{font-family:"montserrat-bold" ;}
-p{font-family: "montserrat-light";}
+h3{font-family:"montserrat-bold" ;
+    font-display: swap}
+h2{font-family:"montserrat-bold" ; font-display: swap}
+p{font-family: "montserrat-light"; font-display: swap}
 
 
 
@@ -106,7 +108,7 @@ p{font-family: "montserrat-light";}
 /* Frontpage content */
 /* Hover-effekt: Skifter logoet til rød */
 .black-logo:hover {
-    content: url('red-logo.svg'); /* Skifter til rød version */
+    content: url('img/red-big.svg'); /* Skifter til rød version */
 }
 
 
@@ -240,11 +242,11 @@ footer {
     background-color: black;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center;
     height: 50px;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 100%; */
 }
 
 footer img {
